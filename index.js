@@ -1,5 +1,6 @@
 const { Telegraf, session, Markup, Scenes} = require('telegraf')
-const bot = new Telegraf("5085600197:AAENIOP9ZtszbvmKM7agAHq0mnNKdzhFJ3k")
+require('dotenv').config()
+const bot = new Telegraf(process.env.BOT_TOKEN)
 const { Keyboard } = require('telegram-keyboard')
 
 const helloScene = require("./scenes/hello.js")
