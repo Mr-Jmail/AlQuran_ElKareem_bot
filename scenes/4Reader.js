@@ -393,7 +393,7 @@ bot.hears(s114, async (ctx) => ctx.replyWithAudio('CQACAgIAAxkBAAID92JJkh7ZdV884
 //bot hearсы на клаву конец
 
 const ReaderChoise = Keyboard.make([
-    ['Аль-Афаси'], ['Абдуль-Басит Абдус-Самад'], ['Ахмад бин Али Аль-Аджми'], ['Мохамед Махмуд Таблави']
+    ['Аль-Афаси (مشاري العفاسي)'], ['Абдуль-Басит Абдус-Самад (عبد الباسط عبد الصمد)'], ['Ахмад бин Али Аль-Аджми (أحمد علي العجمي)'], ['Мохамед Махмуд Таблави (محمد محمود الطبلاوي)']
 ]).oneTime()
 
 bot.command('change_reader', (ctx) => ctx.reply('Выбери нового чтеца', ReaderChoise.reply()))
@@ -402,11 +402,11 @@ bot.start(async (ctx) => {
 	ctx.scene.enter('helloWizard')
 })
 
-bot.hears('Аль-Афаси', ctx => ctx.scene.enter('FirstReaderWizard'))
-bot.hears('Абдуль-Басит Абдус-Самад', ctx => ctx.scene.enter('SecondReaderWizard'))
-bot.hears('Ахмад бин Али Аль-Аджми', ctx => ctx.scene.enter('ThirdReaderWizard'))
-bot.hears('Мохамед Махмуд Таблави', async (ctx) => {
-	await ctx.reply('Отлично, ты выбрал Мохамед Махмуд Таблави, ты в любой момент можешь сменить написав команду /change_reader \nНу а теперь выбери выбери суру', sura.reply())
+bot.hears('Аль-Афаси (مشاري العفاسي)', ctx => ctx.scene.enter('FirstReaderWizard'))
+bot.hears('Абдуль-Басит Абдус-Самад (عبد الباسط عبد الصمد)', ctx => ctx.scene.enter('SecondReaderWizard'))
+bot.hears('Ахмад бин Али Аль-Аджми (أحمد علي العجمي)', ctx => ctx.scene.enter('ThirdReaderWizard'))
+bot.hears('Мохамед Махмуд Таблави (محمد محمود الطبلاوي)', async (ctx) => {
+	await ctx.reply('Отлично, ты выбрал Мохамед Махмуд Таблави (محمد محمود الطبلاوي), ты в любой момент можешь сменить написав команду /change_reader \nНу а теперь выбери выбери суру', sura.reply())
 })
 const FourthReaderScene = new Scenes.WizardScene('FourthReaderWizard', bot)
 module.exports = FourthReaderScene
