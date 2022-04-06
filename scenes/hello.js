@@ -14,7 +14,7 @@ const ReaderChoise = Keyboard.make([
     ['Аль-Афаси (مشاري العفاسي)'], ['Абдуль-Басит Абдус-Самад (عبد الباسط عبد الصمد)'], ['Ахмад бин Али Аль-Аджми (أحمد علي العجمي)'], ['Мохамед Махмуд Таблави (محمد محمود الطبلاوي)']
 ]).oneTime()
 
-bot.command('change_reader', (ctx) => ctx.reply('Выбери нового чтеца'), ReaderChoise.reply())
+bot.command('change_reader', (ctx) => ctx.scene.enter('ChangeReaderWizard'))
 
 
 const helloScene = new Scenes.WizardScene('helloWizard', bot)
