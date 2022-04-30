@@ -1,2 +1,1 @@
-id бота в телеграм: @AlQuran_ElKareem_bot
-бот на заказ любой сложности (телеграмм, вк): https://t.me/Mr_Jmail
+<h1>id бота в телеграм: @AlQuran_ElKareem_bot</h1><br>Бот любой сложности на заказ (телеграмм, вк): https://t.me/Mr_Jmail
